@@ -32,8 +32,6 @@ func init() {
 	flag.IntVar(&DUP_TO_STOP, "d", DUP_TO_STOP, "кол-во дубликатов для остановки")
 	flag.StringVar(&HASH_FILE, "hf", HASH_FILE, "файл хешей")
 	flag.StringVar(&QUOTES_FILE, "qf", QUOTES_FILE, "файл записей")
-	//И запускаем разбор аргументов
-	flag.Parse()
 }
 
 func grab() <-chan string { //функция вернет канал, из которого мы будем читать данные типа string
@@ -93,6 +91,7 @@ func readHashes() {
 }
 
 func main() {
+	flag.Parse() //запускаем разбор аргументов
 	readHashes()
 	//Открываем файл с цитатами...
 	quotes_file, err := os.OpenFile(QUOTES_FILE, os.O_APPEND|os.O_CREATE, 0666)
