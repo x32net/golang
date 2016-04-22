@@ -104,6 +104,29 @@ func main() {
 
 ```
 
+```json
+end 1
+end 2
+2016/04/22 22:16:15 {
+  "args": {}, 
+  "data": "{\"Text\":\"brought to you by io.Pipe()\"}\n", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept-Encoding": "gzip", 
+    "Content-Length": "39", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "User-Agent": "Go-http-client/1.1"
+  }, 
+  "json": {
+    "Text": "brought to you by io.Pipe()"
+  }, 
+  "origin": "10.10.0.1",
+  "url": "https://httpbin.org/post"
+}
+```
+
 Of course in this trivial example it is overkill to use `io.Pipe`. But when the buffers are getting larger and you have lots of goroutines doing this kind of stuff concurrently **`io.Pipe` can help you reduce memory usage**!
 
 </div>
