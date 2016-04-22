@@ -72,3 +72,7 @@ func main() {
 	secondsRemaining := 30 - (epochSeconds % 30)
 	fmt.Printf("%06d (%d second(s) remaining)\n", pwd, secondsRemaining)
 }
+
+```sh
+692049 (16 second(s) remaining)
+```
