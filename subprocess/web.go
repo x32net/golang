@@ -33,6 +33,7 @@ No need to mess with pipes or goroutines, this one is easy.
 
 func main() {
     cmd := exec.Command("ls", "-l") // Replace `ls` (and its arguments) with something more interesting
+    cmd.Stdin = os.Stdin;
     cmd.Stdout = os.Stdout
     cmd.Stderr = os.Stderr
     cmd.Run()
