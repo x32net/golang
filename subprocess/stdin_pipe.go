@@ -1,3 +1,4 @@
+// http://stackoverflow.com/questions/23166468/how-can-i-get-stdin-to-exec-cmd-in-golang
 package main
 
 import (
