@@ -31,7 +31,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	http.HandleFunc("/", handler)
 	log.Printf("Listening for SECURE websocket connections on port 8000.")
-	log.Fatal(http.ListenAndServeTLS(":8000", "cert.pem", "cert.key", nil))
+	log.Fatal(http.ListenAndServeTLS(":8000", "localhost.cert", "localhost.key", nil))
 }
 
 /*
