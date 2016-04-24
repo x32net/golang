@@ -11,7 +11,8 @@ import (
 
 // Create a handler function that calls an upgrade to websocket session using our upgrader parameters
 func handler(w http.ResponseWriter, r *http.Request) {
-	// TODO encode a msg to: gzip, deflate, sdch.
+	// TODO encode to: gzip, deflate, sdch
+	// TODO Let's Encrypt https://habrahabr.ru/post/270273/
 	w.Header().Set("Content-Type", "text/plain")
 	fmt.Fprintf(w, "Method: %s\n", r.Method)
 	fmt.Fprintf(w, "Protocol: %s\n", r.Proto)
