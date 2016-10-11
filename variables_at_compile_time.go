@@ -9,5 +9,6 @@ func main() {
 }
 
 // go build -ldflags "-X main.MainVar=hihi"
-// ./bin
+// go build -ldflags "-X main.MainVar=`date +"%Y-%m-%d_%H-%M-%S"`"
 // MainVar: hihi
+// MainVar: 2016-10-11_15-54-33
